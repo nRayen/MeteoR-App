@@ -1,11 +1,14 @@
 import FaviconSVG from "./svg/FaviconSVG";
 
 const Footer = () => {
+	const date = new Date()
+	const year = date.getUTCFullYear();
+
 	return (
 		<footer>
-			<div class="credits">
+			<div className="credits">
 				<FaviconSVG alt="logo" />
-				<p>© 2024 - MeteoR</p>
+				<p>© {year} - MeteoR</p>
 				<p>
 					by <a href="https://github.com/nRayen">nRayen</a>
 				</p>

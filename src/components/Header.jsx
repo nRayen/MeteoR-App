@@ -6,7 +6,7 @@ const Header = () => {
 		<header>
 			<FaviconSVG id="favicon" alt="favcon" />
 			<h1 id="title">MeteoR</h1>
-			<form class="searchbar glass">
+			<form className="searchbar glass">
 				<input
 					type="text"
 					name="searchbar"
@@ -15,17 +15,17 @@ const Header = () => {
 					autocomplete="off"
 				/>
 				<LoupeSVG />
-				<ul class="suggestions-list glass">
-					<li class="suggestion">Paris</li>
-					<li class="suggestion">New York</li>
-					<li class="suggestion">Dakar</li>
-					<li class="suggestion">Hanoï</li>
+				<ul className="suggestions-list glass">
+					<li className="suggestion">Paris</li>
+					<li className="suggestion">New York</li>
+					<li className="suggestion">Dakar</li>
+					<li className="suggestion">Hanoï</li>
 				</ul>
 			</form>
-			<button class="menu-button" aria-label="menu-button">
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
+			<button className="menu-button" aria-label="menu-button">
+				<div className="bar"></div>
+				<div className="bar"></div>
+				<div className="bar"></div>
 			</button>
 		</header>
 	);

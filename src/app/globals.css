@@ -421,7 +421,7 @@ footer {
         display: none;
     }
 
-    img#favicon {
+    svg#favicon {
         display: block;
         padding: 5px;
     }

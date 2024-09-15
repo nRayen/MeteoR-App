@@ -1,10 +1,4 @@
 "use client";
-import Image from "next/image";
-import NuageuxSVG from "@/components/svg/NuageuxSVG";
-import FaviconSVG from "@/components/svg/FaviconSVG";
-import LoupeSVG from "@/components/svg/LoupeSVG";
-import FlecheGaucheSVG from "@/components/svg/FlecheGaucheSVG";
-import FlecheDroiteSVG from "@/components/svg/FlecheDroiteSVG";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CurrentWeather from "@/components/CurrentWeather";
@@ -18,12 +12,11 @@ export default function Home() {
 			<Header />
 			<main>
 				<CurrentWeather />
-				<div class="informations">
-					<div class="left">
+				<div className="informations">
+					<div className="left">
 						<WeatherInfos />
 						<DailyPreview />
 					</div>
-
 					<HourlyPreview />
 				</div>
 			</main>

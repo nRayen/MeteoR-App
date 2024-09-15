@@ -1,26 +1,30 @@
+import { useState } from "react";
 import FlecheDroiteSVG from "./svg/FlecheDroiteSVG";
 import FlecheGaucheSVG from "./svg/FlecheGaucheSVG";
 import NuageuxSVG from "./svg/NuageuxSVG";
 
 const CurrentWeather = () => {
-	return (
-		<section class="current">
-			<h2 class="currentCity">Paris</h2>
+	let [city, setCity] = useState("Paris")
 
-			<div class="date">
-				<button class="dateselector dateLeft" aria-label="date-selector-left">
+
+	return (
+		<section className="current">
+			<h2 className="currentCity">{city}</h2>
+
+			<div className="date">
+				<button className="dateselector dateLeft" aria-label="date-selector-left">
 					<FlecheGaucheSVG />
 				</button>
 				<p>05/09/2024</p>
-				<button class="dateselector dateRight" aria-label="date-selector-left">
+				<button className="dateselector dateRight" aria-label="date-selector-left">
 					<FlecheDroiteSVG />
 				</button>
 			</div>
 
-			<p class="temperature">20°C</p>
-			<div class="sky">
-				<NuageuxSVG alt="nuage" class="sky-icon" />
-				<p class="sky-label">Nuageux</p>
+			<p className="temperature">20°C</p>
+			<div className="sky">
+				<NuageuxSVG alt="nuage" className="sky-icon" />
+				<p className="sky-label">Nuageux</p>
 			</div>
 		</section>
 	);
