@@ -37,8 +37,9 @@ img, svg {
 }
 
 .glass-text {
-    color: rgba(255, 240, 240, 0.259);
-    text-shadow: none;
+    /* color: rgba(255, 240, 240, 0.259); */
+    color: rgb(212, 210, 210);
+    /* text-shadow: none; */
     font-weight: normal;
 }
 

@@ -3,8 +3,10 @@ import FlecheDroiteSVG from "./svg/FlecheDroiteSVG";
 import FlecheGaucheSVG from "./svg/FlecheGaucheSVG";
 import NuageuxSVG from "./svg/NuageuxSVG";
 
-const CurrentWeather = () => {
-	let [city, setCity] = useState("Paris")
+const CurrentWeather = ({selectedDate, onNextDay, onPreviousDay}) => {
+	const [city, setCity] = useState("Paris")
+	const [weather, setWeather] = useState("Nuageux")
+	const [temperature, setTemperature] = useState(20)
 
 
 	return (
@@ -12,19 +14,19 @@ const CurrentWeather = () => {
 			<h2 className="currentCity">{city}</h2>
 
 			<div className="date">
-				<button className="dateselector dateLeft" aria-label="date-selector-left">
+				<button className="dateselector dateLeft" aria-label="date-selector-left" onClick={onPreviousDay}>
 					<FlecheGaucheSVG />
 				</button>
-				<p>05/09/2024</p>
-				<button className="dateselector dateRight" aria-label="date-selector-left">
+				<p>{new Date(selectedDate).toLocaleDateString()}</p>
+				<button className="dateselector dateRight" aria-label="date-selector-left" onClick={onNextDay}>
 					<FlecheDroiteSVG />
 				</button>
 			</div>
 
-			<p className="temperature">20°C</p>
+			<p className="temperature">{temperature}°C</p>
 			<div className="sky">
 				<NuageuxSVG alt="nuage" className="sky-icon" />
-				<p className="sky-label">Nuageux</p>
+				<p className="sky-label">{weather}</p>
 			</div>
 		</section>
 	);
