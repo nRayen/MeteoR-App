@@ -499,19 +499,23 @@ footer {
                 width: 50%;
                 .preview-h {
                     height: calc(520px - 15px - 23px);
-                    overflow: hidden;
+                    overflow: visible;
                     display: grid;
-                    grid-template-columns: repeat(6, 1fr);
-                    grid-template-rows: repeat(4, 1fr);
+                    gap: 20px;
+                    padding: 10px 5px;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
                     .h {
                         min-width: 0;
                         min-height: 0;
-                        position: relative;
+                        font-size: 1.4rem;
+
                         svg {
                             height: 38%;
                         }
 
-                        &:not(&:nth-child(6n))::after {
+                        /* Lignes séparatrices */
+                        /* &:not(&:nth-child(6n))::after {
                             content: "";
                             width: 1px;
                             height: 119%;
@@ -528,7 +532,41 @@ footer {
                         &:nth-child(n+19)::after {
                             bottom: 15px;
                             height: calc(120% - 26px) !important;
+                        } */
+
+
+                        /* Background lignes */
+                        /* &:nth-child(-n+6), &:nth-child(n+13):nth-child(-n+18) {
+                            background: rgba(255, 240, 240, 0.08);
+                            width: 100%;
+                            height: 100%;
+
+
+                            background: rgba(255, 240, 240, 0.08);
+                            backdrop-filter: blur(5px);
+                            border: 1px solid rgba(255, 240, 240, 0.058);
+                        } */
+
+                        &:nth-child(2n) {
+                            display: none;
                         }
+
+                        &:nth-child(odd) {
+                            background: rgba(80, 71, 71, 0.08);
+                            backdrop-filter: blur(5px);
+                            border: 1px solid rgba(255, 240, 240, 0.058);
+                            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                            border-radius: 12px;
+                        }
+/*
+                        &:nth-child(3),
+                        &:nth-child(7),
+                        &:nth-child(9),
+                        &:nth-child(13),
+                        &:nth-child(19),
+                        &:nth-child(23) {
+                            background: rgba(255, 240, 240, 0.08);
+                        } */
                     }
                 }
             }
