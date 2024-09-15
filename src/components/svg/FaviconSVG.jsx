@@ -6,6 +6,7 @@ const FaviconSVG = () => {
 			xmlns="http://www.w3.org/2000/svg"
 			stroke="#ffffff"
 			stroke-width="0.00512"
+			xmlSpace="preserve"
 		>
 			<g id="SVGRepo_bgCarrier" stroke-width="0" />
 

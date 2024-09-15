@@ -66,6 +66,10 @@ header {
         left: 0;
     }
 
+    svg {
+        height: 100%;
+    }
+
     h1 {
         font-size: 1.3rem;
     }
