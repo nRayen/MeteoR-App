@@ -8,7 +8,6 @@ const CurrentWeather = ({selectedDate, onNextDay, onPreviousDay}) => {
 	const [weather, setWeather] = useState("Nuageux")
 	const [temperature, setTemperature] = useState(20)
 
-
 	return (
 		<section className="current">
 			<h2 className="currentCity">{city}</h2>

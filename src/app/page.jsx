@@ -7,9 +7,14 @@ import DailyPreview from "@/components/DailyPreview";
 import HourlyPreview from "@/components/HourlyPreview";
 import { useState } from "react";
 import Header from "@/components/Header";
+import Menu from "@/components/Menu";
 
 export default function Home() {
-
+	// Menu open
+	const [menuIsOpen, setMenuIsOpen] = useState(false)
+	const handleMenu = () => {
+		setMenuIsOpen(!menuIsOpen)
+	}
 
 	//Date selector
 	const [selectedDate, setSelectedDate] = useState(new Date)
@@ -23,7 +28,7 @@ export default function Home() {
 
 	return (
 		<body>
-			<Header />
+			<Header onHandleMenu = {handleMenu}/>
 			<main>
 				<CurrentWeather selectedDate = {selectedDate} onPreviousDay={previousDay} onNextDay={nextDay} />
 				<div className="informations">
@@ -35,6 +40,10 @@ export default function Home() {
 				</div>
 			</main>
 			<Footer />
+			{/* {
+				menuIsOpen ? <Menu onHandleMenu={handleMenu}/> : null
+			} */}
+			<Menu className={menuIsOpen ? "menu visible" : "menu"} menuIsOpen={menuIsOpen} onHandleMenu={handleMenu}/>
 		</body>
 	);
 }

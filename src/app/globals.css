@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
     min-height: 100vh;
     background: var(--bg-color-1);
     background: -webkit-linear-gradient(to bottom, var(--bg-color-1) 30%, var(--bg-color-2));
@@ -572,5 +573,95 @@ footer {
             }
         }
 
+    }
+}
+
+
+/* Menu */
+
+.menu{
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(0px) opacity(0);
+    filter: opacity(0);
+    transition: all 0.5s;
+
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.663) 1px 0 5px;
+
+    .wrapper {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80%;
+        width: 40%;
+        gap: 30px;
+        h2 {
+
+            font-size: 3rem;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            li {
+                font-size: 1.5rem;
+                padding: 10px 0;
+                width: 100%;
+                max-width: 500px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:not(&:nth-last-child(1)) {
+                    border-bottom: 1px solid rgba(255, 240, 240, 0.29);
+                }
+
+                svg {
+                    width: 35px;
+                    height: 35px;
+
+                    stroke: white;
+                    fill: white;
+                    cursor: pointer;
+
+                    &:hover {
+                        fill: none;
+                    }
+                }
+            }
+        }
+    }
+
+        .close-menu {
+            position: absolute;
+            background: none;
+            border: none;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            top: 20px;
+            right: 20px;
+            svg {
+                fill: white;
+            }
+        }
+
+        &.visible {
+            backdrop-filter: blur(40px) opacity(1);
+            filter: opacity(1);
+            visibility: visible;
     }
 }

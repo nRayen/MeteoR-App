@@ -1,7 +1,7 @@
 import LoupeSVG from "./svg/LoupeSVG";
 import FaviconSVG from "./svg/FaviconSVG";
 
-const Header = () => {
+const Header = ({onHandleMenu}) => {
 	return (
 		<header>
 			<FaviconSVG id="favicon" alt="favcon" />
@@ -22,7 +22,7 @@ const Header = () => {
 					<li className="suggestion">Hanoï</li>
 				</ul>
 			</form>
-			<button className="menu-button" aria-label="menu-button">
+			<button className="menu-button" aria-label="menu-button" onClick={onHandleMenu}>
 				<div className="bar"></div>
 				<div className="bar"></div>
 				<div className="bar"></div>
