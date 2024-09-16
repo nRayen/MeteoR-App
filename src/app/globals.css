@@ -183,6 +183,7 @@ main {
     max-width: 1200px;
     width: 100%;
     height: 100%;
+    height: calc(100% - 64px - 136px);
     margin: auto;
     padding: 20px 0;
     color: rgb(255, 255, 255);
@@ -313,7 +314,7 @@ main {
                 left: 0;
             }
         }
-        .preview-h {
+        .preview-h.mobile {
             display: flex;
             gap: 20px;
             overflow-x: scroll;
@@ -335,6 +336,10 @@ main {
                     font-weight: 400;
                 }
             }
+        }
+
+        .preview-h.desktop {
+            display: none;
         }
     }
 
@@ -498,76 +503,59 @@ footer {
             .hourly {
                 margin: 0;
                 width: 50%;
-                .preview-h {
+                max-width: 50%;
+
+                .preview-h.mobile {
+                    display: none;
+                }
+
+                .preview-h.desktop {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
                     height: calc(520px - 15px - 23px);
-                    overflow: visible;
-                    display: grid;
-                    gap: 20px;
-                    padding: 10px 5px;
-                    grid-template-columns: repeat(4, 1fr);
-                    grid-template-rows: repeat(3, 1fr);
-                    .h {
-                        min-width: 0;
-                        min-height: 0;
-                        font-size: 1.4rem;
+                    font-weight: normal;
+                    font-size: 1.3rem;
 
-                        svg {
-                            height: 38%;
+                    .day {
+                        display: flex;
+                        align-items: center;
+                        height: 25%;
+
+                        &:not(:last-child) {
+                            border-bottom: 1px solid rgba(255, 240, 240, 0.29);
                         }
 
-                        /* Lignes séparatrices */
-                        /* &:not(&:nth-child(6n))::after {
-                            content: "";
-                            width: 1px;
-                            height: 119%;
-                            background-color: rgba(255, 240, 240, 0.259);
-                            position: absolute;
-                            right: -10px;
-                        }
-
-                        &:nth-child(-n+5)::after {
-                            top: 15px;
-                            height: calc(120% - 26px) !important;
-                        }
-
-                        &:nth-child(n+19)::after {
-                            bottom: 15px;
-                            height: calc(120% - 26px) !important;
-                        } */
-
-
-                        /* Background lignes */
-                        /* &:nth-child(-n+6), &:nth-child(n+13):nth-child(-n+18) {
-                            background: rgba(255, 240, 240, 0.08);
-                            width: 100%;
+                        >p {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                             height: 100%;
-
-
-                            background: rgba(255, 240, 240, 0.08);
-                            backdrop-filter: blur(5px);
-                            border: 1px solid rgba(255, 240, 240, 0.058);
-                        } */
-
-                        &:nth-child(2n) {
-                            display: none;
+                            width: 49px;
+                            padding-right: 10px;
                         }
 
-                        &:nth-child(odd) {
-                            background: rgba(80, 71, 71, 0.08);
-                            backdrop-filter: blur(5px);
-                            border: 1px solid rgba(255, 240, 240, 0.058);
-                            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                            border-radius: 12px;
+                        .hours {
+                            display: flex;
+                            justify-content: space-around;
+                            border-left: 1px solid rgba(255, 240, 240, 0.29);
+                            width: 520px;
+
+
+                            .h {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 0px;
+                                font-size: 20px;
+                                padding: 3px 0;
+
+                                h4 {
+                                    font-weight: 400;
+                                }
+                            }
                         }
-/*
-                        &:nth-child(3),
-                        &:nth-child(7),
-                        &:nth-child(9),
-                        &:nth-child(13),
-                        &:nth-child(19),
-                        &:nth-child(23) {
-                            background: rgba(255, 240, 240, 0.08);
-                        } */
                     }
                 }
             }
