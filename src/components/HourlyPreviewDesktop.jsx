@@ -5,7 +5,7 @@ const HourlyPreviewDesktop = () => {
 			<div className="preview-h desktop">
 
 				<div className="day">
-					<p>Lun.</p>
+					<p>Auj.</p>
 					<div className="hours">
 						<div className="h">
 							<h4>00h</h4>

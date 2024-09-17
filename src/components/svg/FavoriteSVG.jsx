@@ -1,6 +1,17 @@
+import { useState } from "react";
+
 const FavoriteSVG = () => {
+
+	const [checked, setChecked] = useState(false)
+	const handleClick = () => {
+		setChecked(!checked)
+	}
+
 	return (
 		<svg
+			className={checked && "checked"}
+			onClick={handleClick}
+
 			fill="#c75252"
 			width="213px"
 			height="213px"
