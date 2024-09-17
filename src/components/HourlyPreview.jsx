@@ -1,6 +1,5 @@
 import HourlyPreviewDesktop from "./HourlyPreviewDesktop";
 import HourlyPreviewMobile from "./HourlyPreviewMobile";
-import NuageuxSVG from "./svg/NuageuxSVG";
 
 const HourlyPreview = () => {
 	return (
