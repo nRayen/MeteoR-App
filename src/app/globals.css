@@ -192,14 +192,19 @@ main {
         flex-direction: column;
         align-items: center;
         height: 40%;
+        justify-content: center;
+
 
         .currentCity {
             font-size: 4rem;
-            display: inline-block;
+            display: flex;
+
+            align-items: center;
+
+
 
             svg {
                 height: 40px;
-                width: fit-content;
                 cursor: pointer;
                 stroke: white;
                 fill: none;
