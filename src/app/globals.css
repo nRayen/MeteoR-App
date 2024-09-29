@@ -290,23 +290,14 @@ main {
         }
 
         .card {
+            height: 100%;
             min-width: calc(50% - 10px);
             padding: 5px 10px 10px;
             scroll-snap-align: start;
             box-shadow: none;
             overflow: visible;
             position: relative;
-
-            &::after {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: "";
-                border-radius: 16px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            }
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
             h3 {
                 position: relative;
@@ -322,25 +313,17 @@ main {
                 }
             }
 
-            div {
+            p {
+                font-size: 2.5rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                p {
-                    font-size: 2.5rem;
-                    display: block;
-                    width: fit-content;
-                    height: 100% ;
-                    justify-content: center;
-                }
-
-                svg {
-                    display: none;
-                    width: 39%;
-                    max-height: 100%;
-                    stroke: white;
-                }
+                margin: auto;
+                text-align: center;
+                height: calc(100% - 25px);
+                margin-bottom: 5px;
             }
+
         }
     }
 
@@ -477,6 +460,15 @@ footer {
     svg#favicon {
         display: block;
         padding: 5px;
+    }
+
+    .weather-info {
+        .card {
+            p {
+                font-size: 2rem !important;
+                text-overflow: ellipsis;
+            }
+        }
     }
 }
 
