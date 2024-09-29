@@ -9,26 +9,27 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Menu from "@/components/Menu";
 
-export default function Home() {
+export default function Home({params}) {
 	// Menu open
 	const [menuIsOpen, setMenuIsOpen] = useState(false)
 	const handleMenu = () => {
 		setMenuIsOpen(!menuIsOpen)
 	}
 
+    const [city,setCity] = useState(params.ville)
+
 	return (
 		<body>
 			<Header onHandleMenu = {handleMenu}/>
 			<main>
-				{/* <CurrentWeather/>
+				<CurrentWeather city = {city}/>
 				<div className="informations">
 					<div className="left">
 						<WeatherInfos />
 						<DailyPreview />
 					</div>
 					<HourlyPreview />
-				</div> */}
-				<h2>Chargement...</h2>
+				</div>
 			</main>
 			<Footer />
 			{/* {

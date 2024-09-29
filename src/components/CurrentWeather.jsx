@@ -5,12 +5,9 @@ import NuageuxSVG from "./svg/NuageuxSVG";
 import FavoriteSVG from "./svg/FavoriteSVG";
 import DateSelector from "./DateSelector";
 
-const CurrentWeather = ({selectedDate, onNextDay, onPreviousDay}) => {
-	const [city, setCity] = useState("Paris")
+const CurrentWeather = ({city}) => {
 	const [weather, setWeather] = useState("Nuageux")
 	const [temperature, setTemperature] = useState(20)
-
-
 
 	return (
 		<section className="current">
@@ -22,7 +19,7 @@ const CurrentWeather = ({selectedDate, onNextDay, onPreviousDay}) => {
 				<p className="sky-label">{weather}</p>
 			</div>
 
-			<DateSelector selectedDate = {selectedDate} onPreviousDay={onPreviousDay} onNextDay={onNextDay}/>
+			<DateSelector/>
 		</section>
 	);
 };
