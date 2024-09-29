@@ -16,6 +16,10 @@ export default function Home() {
 		setMenuIsOpen(!menuIsOpen)
 	}
 
+	const focusSearchBar = () => {
+		document.querySelector("#searchInput").focus();
+	}
+
 	return (
 		<body>
 			<Header onHandleMenu = {handleMenu}/>
@@ -28,7 +32,8 @@ export default function Home() {
 					</div>
 					<HourlyPreview />
 				</div> */}
-				<h2>Chargement...</h2>
+				<p>Recherchez une ville</p>
+				<button onClick={focusSearchBar}>Recherche</button>
 			</main>
 			<Footer />
 			{/* {
