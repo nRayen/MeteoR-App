@@ -5,8 +5,7 @@ import NuageuxSVG from "./svg/NuageuxSVG";
 import FavoriteSVG from "./svg/FavoriteSVG";
 import DateSelector from "./DateSelector";
 
-const CurrentWeather = ({city}) => {
-	const [weather, setWeather] = useState("Nuageux")
+const CurrentWeather = ({city, weather}) => {
 	const [temperature, setTemperature] = useState(20)
 
 	return (
