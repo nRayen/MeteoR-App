@@ -1,11 +1,8 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import CurrentWeather from "@/components/CurrentWeather";
-import WeatherInfos from "@/components/WeatherInfos";
-import DailyPreview from "@/components/DailyPreview";
-import HourlyPreview from "@/components/HourlyPreview";
 import { useState } from "react";
+
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Menu from "@/components/Menu";
 
@@ -23,15 +20,7 @@ export default function Home() {
 	return (
 		<body>
 			<Header onHandleMenu = {handleMenu}/>
-			<main>
-				{/* <CurrentWeather/>
-				<div className="informations">
-					<div className="left">
-						<WeatherInfos />
-						<DailyPreview />
-					</div>
-					<HourlyPreview />
-				</div> */}
+			<main className="noCity">
 				<p>Recherchez une ville</p>
 				<button onClick={focusSearchBar}>Recherche</button>
 			</main>
