@@ -5,8 +5,10 @@ import Link from "next/link";
 const Header = ({ onHandleMenu }) => {
 	return (
 		<header>
-			<FaviconSVG id="favicon" alt="favcon" />
-			<h1 id="title">MeteoR</h1>
+			<FaviconSVG id="favicon" alt="favcon"/>
+			<Link href="./">
+				<h1 id="title">MeteoR</h1>
+			</Link>
 			<form className="searchbar glass">
 				<input
 					type="text"
