@@ -15,7 +15,7 @@ const Header = ({ onHandleMenu }) => {
 					name="searchbar"
 					id="searchInput"
 					placeholder="Chercher un lieu"
-					autocomplete="off"
+					autoComplete="off"
 				/>
 				<LoupeSVG />
 				<ul className="suggestions-list glass">

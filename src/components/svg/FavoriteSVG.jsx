@@ -9,7 +9,7 @@ const FavoriteSVG = () => {
 	return (
 		<p>
 			<svg
-				className={checked && "checked"}
+				className={checked ? "checked" : ""}
 				onClick={handleClick}
 				fill="#c75252"
 				viewBox="-4.8 -4.8 41.60 41.60"
@@ -17,12 +17,12 @@ const FavoriteSVG = () => {
 				xmlns="http://www.w3.org/2000/svg"
 				stroke="#c75252"
 			>
-				<g id="SVGRepo_bgCarrier" stroke-width="5px" />
+				<g id="SVGRepo_bgCarrier" strokeWidth="5px" />
 
 				<g
 					id="SVGRepo_tracerCarrier"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 
 				<g id="SVGRepo_iconCarrier">
