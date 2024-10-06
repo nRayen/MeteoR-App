@@ -1,12 +1,13 @@
+"use client"
+
 import { useState } from "react";
 
 import CrossSVG from "./svg/CrossSVG";
 import FavoriteSVG from "./svg/FavoriteSVG";
 import Link from "next/link";
 
-const Menu = ({ menuIsOpen,onHandleMenu }) => {
+const Menu = ({menuIsOpen, onHandleMenu}) => {
 	const [favorites, setFavorites] = useState(["Paris", "Bamako","Dubai","Dakar", "Hanoi"]);
-	console.log(favorites);
 
 	return (
 		<menu className={menuIsOpen ? "menu visible" : "menu"}>
@@ -20,7 +21,7 @@ const Menu = ({ menuIsOpen,onHandleMenu }) => {
 			    </ul>
             </div>
 
-			<button className="close-menu" aria-label="close-menu" onClick={onHandleMenu}>
+			<button className="close-menu" aria-label="close-menu" onClick={onHandleMenu} >
 				<CrossSVG/>
 			</button>
 		</menu>

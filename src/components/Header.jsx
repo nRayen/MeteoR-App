@@ -1,8 +1,20 @@
+"use client"
 import LoupeSVG from "./svg/LoupeSVG";
 import FaviconSVG from "./svg/FaviconSVG";
 import Link from "next/link";
+import { useState } from "react";
+import Menu from "./Menu";
 
-const Header = ({ onHandleMenu }) => {
+const Header = () => {
+
+	const [menuIsOpen, setMenuIsOpen] = useState(false)
+	const handleMenu = () => {
+		setMenuIsOpen(!menuIsOpen)
+		console.log(menuIsOpen)
+	}
+
+
+
 	return (
 		<header>
 			<FaviconSVG id="favicon" alt="favcon"/>
@@ -36,12 +48,13 @@ const Header = ({ onHandleMenu }) => {
 			<button
 				className="menu-button"
 				aria-label="menu-button"
-				onClick={onHandleMenu}
+				onClick={handleMenu}
 			>
 				<div className="bar"></div>
 				<div className="bar"></div>
 				<div className="bar"></div>
 			</button>
+			<Menu onHandleMenu={handleMenu} menuIsOpen={menuIsOpen}/>
 		</header>
 	);
 };

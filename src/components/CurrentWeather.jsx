@@ -1,12 +1,15 @@
+"use client"
 import { useState } from "react";
-import FlecheDroiteSVG from "./svg/FlecheDroiteSVG";
-import FlecheGaucheSVG from "./svg/FlecheGaucheSVG";
+
 import NuageuxSVG from "./svg/NuageuxSVG";
 import FavoriteSVG from "./svg/FavoriteSVG";
 import DateSelector from "./DateSelector";
+import { Capitalize } from "@/utils/capitalize";
 
-const CurrentWeather = ({city, weather}) => {
-	const [temperature, setTemperature] = useState(20)
+const CurrentWeather = ({city, data}) => {
+
+	let temperature = Math.round(data.main.temp)
+	let description = (Capitalize(data.weather[0].description))
 
 	return (
 		<section className="current">
@@ -15,9 +18,8 @@ const CurrentWeather = ({city, weather}) => {
 			<p className="temperature">{temperature}°C</p>
 			<div className="sky">
 				<NuageuxSVG alt="nuage" className="sky-icon" />
-				<p className="sky-label">{weather}</p>
+				<p className="sky-label">{description}</p>
 			</div>
-
 			<DateSelector/>
 		</section>
 	);
