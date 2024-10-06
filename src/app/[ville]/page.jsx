@@ -21,7 +21,7 @@ export default async function Home({params}) {
 				<CurrentWeather city = {city} data={data}/>
 				<div className="informations">
 					<div className="left">
-						<WeatherInfos />
+						<WeatherInfos data={data}/>
 						<DailyPreview />
 					</div>
 					<HourlyPreview />
