@@ -2,7 +2,7 @@
 async function getCoords(city) {
 
     try {
-        let res = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city},&limit=1&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`)
+        let res = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city},&limit=1&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`)
 
         if (!res.ok) {
             throw new Error("Erreur : " + res.status)
