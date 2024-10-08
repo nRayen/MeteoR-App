@@ -53,7 +53,6 @@ async function getForecast(lat, lon) {
     }
 }
 
-
 // EXPORTED MAIN FUNCTION
 export async function getCurrentData(city) {
     let coords = await getCoords(city)
