@@ -1,27 +1,32 @@
-"use client"
+"use client";
 import LoupeSVG from "./svg/LoupeSVG";
 import FaviconSVG from "./svg/FaviconSVG";
 import Link from "next/link";
 import { useState } from "react";
 import Menu from "./Menu";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
-
-	const [menuIsOpen, setMenuIsOpen] = useState(false)
+	const [menuIsOpen, setMenuIsOpen] = useState(false);
+	const router = useRouter();
 	const handleMenu = () => {
-		setMenuIsOpen(!menuIsOpen)
-		console.log(menuIsOpen)
-	}
+		setMenuIsOpen(!menuIsOpen);
+		console.log(menuIsOpen);
+	};
 
-
+	const onSubmit = (event) => {
+		event.preventDefault();
+		let input = event.target.children[0].value;
+		router.push(`/${input}`);
+	};
 
 	return (
 		<header>
-			<FaviconSVG id="favicon" alt="favcon"/>
+			<FaviconSVG id="favicon" alt="favcon" />
 			<Link href="./">
 				<h1 id="title">MeteoR</h1>
 			</Link>
-			<form className="searchbar glass">
+			<form className="searchbar glass" onSubmit={onSubmit}>
 				<input
 					type="text"
 					name="searchbar"
@@ -54,7 +59,7 @@ const Header = () => {
 				<div className="bar"></div>
 				<div className="bar"></div>
 			</button>
-			<Menu onHandleMenu={handleMenu} menuIsOpen={menuIsOpen}/>
+			<Menu onHandleMenu={handleMenu} menuIsOpen={menuIsOpen} />
 		</header>
 	);
 };

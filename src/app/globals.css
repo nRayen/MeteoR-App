@@ -470,6 +470,7 @@ footer {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 20px;
     padding: 10px;
 
     border-top: rgba(255, 240, 240, 0.29) 1px solid;

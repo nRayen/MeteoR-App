@@ -1,10 +1,11 @@
+import DayHourlyPreviewDesktop from "./DayHourlyPreviewDesktop";
 import NuageuxSVG from "./svg/NuageuxSVG";
 
-const HourlyPreviewDesktop = () => {
+const HourlyPreviewDesktop = ({currentData, forecastData}) => {
 	return (
 			<div className="preview-h desktop">
 
-				<div className="day">
+				{/* <div className="day">
 					<p>Auj.</p>
 					<div className="hours">
 						<div className="h">
@@ -55,7 +56,8 @@ const HourlyPreviewDesktop = () => {
 							<p>20°</p>
 						</div>
 					</div>
-				</div>
+				</div> */}
+				<DayHourlyPreviewDesktop data= {forecastData}/>
 
 				<div className="day">
 					<p>Mar.</p>

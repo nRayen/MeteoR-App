@@ -1,16 +1,17 @@
 import React from 'react'
-import { Bars } from 'react-loader-spinner'
+// import { Bars } from 'react-loader-spinner'
 
 const Loading = () => {
   return (
     <div className="loader">
-        <Bars
+        {/* <Bars
         height="100%"
         width="100%"
         color="rgba(255, 240, 240, 0.08)"
         ariaLabel="bars-loading"
         visible={true}
-        />
+        /> */}
+        <h1>Chargement...</h1>
     </div>
   )
 }
