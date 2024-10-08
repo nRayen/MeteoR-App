@@ -10,18 +10,18 @@ import { getData } from "@/utils/getData";
 export default async function Home({params}) {
 
 	const city = params.ville;
-	let data = await getData(params.ville)
-	console.log(data)
+	let currentData = await getData(params.ville)
+	console.log(currentData)
 
 	return (
 		<body>
 			<Header/>
 			<main>
 
-				<CurrentWeather city = {city} data={data}/>
+				<CurrentWeather city = {city} currentData={currentData}/>
 				<div className="informations">
 					<div className="left">
-						<WeatherInfos data={data}/>
+						<WeatherInfos currentData={currentData}/>
 						<DailyPreview />
 					</div>
 					<HourlyPreview />

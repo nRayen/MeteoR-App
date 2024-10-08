@@ -6,10 +6,10 @@ import FavoriteSVG from "./svg/FavoriteSVG";
 import DateSelector from "./DateSelector";
 import { Capitalize } from "@/utils/capitalize";
 
-const CurrentWeather = ({city, data}) => {
+const CurrentWeather = ({city, currentData}) => {
 
-	let temperature = Math.round(data.main.temp)
-	let description = (Capitalize(data.weather[0].description))
+	let temperature = Math.round(currentData.main.temp)
+	let description = (Capitalize(currentData.weather[0].description))
 
 	return (
 		<section className="current">
