@@ -2,6 +2,8 @@
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import LocateSVG from "@/components/svg/LocateSVG";
+import LoupeSVG from "@/components/svg/LoupeSVG";
 
 
 export default function Home() {
@@ -11,15 +13,25 @@ export default function Home() {
 		document.querySelector("#searchInput").focus();
 	}
 
+	let localisation;
+
+	function locateUser() {
+		navigator.geolocation.getCurrentPosition((position) => {
+
+			console.log(position)
+		})
+	}
+
 
 	return (
 		<body>
 			<Header/>
 			<main className="noCity">
-				<p>Recherchez une ville</p>
-				<button onClick={focusSearchBar}>Recherche</button>
+				<button onClick={focusSearchBar}>Recherchez votre ville<LoupeSVG/></button>
+				<p>ou</p>
+				<button onClick={locateUser}>Localisez vous<LocateSVG/></button>
 			</main>
-			<Footer />
+			<Footer/>
 		</body>
 	);
 }
