@@ -1,5 +1,3 @@
-import FaviconSVG from "./svg/FaviconSVG";
-
 const Footer = () => {
 	const date = new Date()
 	const year = date.getUTCFullYear();

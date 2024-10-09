@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import FlecheDroiteSVG from "./svg/FlecheDroiteSVG";
-import FlecheGaucheSVG from "./svg/FlecheGaucheSVG";
 
 const daysOfWeek = ["Aujourd'hui", "Mardi", "Mercredi", "Jeudi", "Vendredi"];
 

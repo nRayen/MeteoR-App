@@ -7,6 +7,7 @@ import Menu from "./Menu";
 import { useRouter } from "next/navigation";
 
 const Header = () => {
+
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
 	const router = useRouter();
 	const handleMenu = () => {
@@ -20,6 +21,8 @@ const Header = () => {
 		router.push(`/${input}`);
 	};
 
+
+	
 	return (
 		<header>
 			<FaviconSVG id="favicon" alt="favcon" />
