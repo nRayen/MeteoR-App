@@ -1,6 +1,7 @@
 import { getCity } from "@/utils/getData";
 import LocateSVG from "./svg/LocateSVG";
 import LoupeSVG from "./svg/LoupeSVG";
+import FaviconSVG from "./svg/FaviconSVG";
 
 function HomeMain () {
 
@@ -15,6 +16,7 @@ function HomeMain () {
         <button onClick={focusSearchBar}>Recherchez votre ville<LoupeSVG/></button>
         {/* <p>ou</p>
         <button onClick={locateUserr}>Localisez vous<LocateSVG/></button> */}
+        <FaviconSVG/>
     </main>
   )
 }

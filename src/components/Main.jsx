@@ -1,20 +1,34 @@
+"use client"
 import { getCurrentData } from "@/utils/getData";
 import React from "react";
 import CurrentWeather from "./CurrentWeather";
 import WeatherInfos from "./WeatherInfos";
 import DailyPreview from "./DailyPreview";
 import HourlyPreview from "./HourlyPreview";
+import { useRouter } from "next/navigation";
 
 function delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 async function Main({city}) {
+	const router = useRouter();
 
-    let currentData = await getCurrentData(city);
-	console.log(currentData);
+	let currentData
+	let forecastData
 
-	let forecastData = await getCurrentData(city);
-	console.log(forecastData);
+	try {
+		currentData = await getCurrentData(city);
+		forecastData = await getCurrentData(city);
+		if (!currentData || currentData.cod !== 200) {
+			router.push("/notfound/")
+            return;
+        }
+	} catch (error) {
+		router.push("/notfound")
+		return
+	}
+
+
 
 	return (
 		<main>
