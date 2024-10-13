@@ -7,6 +7,7 @@ const CurrentWeather = ({ city, currentData }) => {
 	let temperature = Math.round(currentData.main.temp);
 	let description = Capitalize(currentData.weather[0].description);
 	let iconCode = currentData.weather[0].icon
+	console.log(iconCode)
 
 	return (
 		<section className="current">

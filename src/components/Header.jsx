@@ -12,7 +12,6 @@ const Header = () => {
 	const router = useRouter();
 	const handleMenu = () => {
 		setMenuIsOpen(!menuIsOpen);
-		console.log(menuIsOpen);
 	};
 
 	const onSubmit = (event) => {
@@ -22,7 +21,7 @@ const Header = () => {
 	};
 
 
-	
+
 	return (
 		<header>
 			<FaviconSVG id="favicon" alt="favcon" />

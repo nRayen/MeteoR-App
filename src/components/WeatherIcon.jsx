@@ -14,9 +14,11 @@ import FogSVG from './svg/weather/FogSVG'
 
 const WeatherIcon = ({code}) => {
 
+    console.log(code)
 
     switch (code) {
         case "01d" : // Clear
+        console.log("test")
             return <ClearDaySVG className="sky-icon"/>
         case "01n" :
             return <ClearNightSVG className="sky-icon"/>
@@ -26,9 +28,9 @@ const WeatherIcon = ({code}) => {
         case "02n" :
             return <PartlyCloudyNightSVG className="sky-icon"/>
 
-        case "02d" : // Cloud
+        case "03d" : // Cloud
             return <CloudySVG className="sky-icon"/>
-        case "02n" :
+        case "03n" :
             return <CloudySVG className="sky-icon"/>
 
         case "04d" : // Full Cloud
@@ -61,7 +63,7 @@ const WeatherIcon = ({code}) => {
         case "50n" :
             return <FogSVG className="sky-icon"/>
         default :
-            return <p>Error</p>
+            return <p>{code}</p>
     }
 }
 
