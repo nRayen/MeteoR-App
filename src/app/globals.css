@@ -733,6 +733,7 @@ footer {
 /* No city */
 
 main.noCity {
+    z-index: 1 ;
     padding: 20px;
     display: flex;
     justify-content: center;
