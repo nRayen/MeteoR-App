@@ -4,8 +4,8 @@ import DateSelector from "./DateSelector";
 import { Capitalize } from "@/utils/capitalize";
 
 const CurrentWeather = ({ city, currentData }) => {
-	let temperature = Math.round(currentData.main.temp);
-	let description = Capitalize(currentData.weather[0].description);
+	let temperature = Math.round(currentData.temp);
+	let description = currentData.conditions;
 
 	return (
 		<section className="current">

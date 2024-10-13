@@ -1,9 +1,9 @@
 const WeatherInfos = ({currentData}) => {
 
-	let ressenti = Math.round(currentData.main.feels_like)
-	let humidity = currentData.main.humidity
-	let wind_speed = Math.round(currentData.wind.speed * 3.6)
-	let visibility = currentData.visibility / 1000
+	let ressenti = Math.round(currentData.feelslike)
+	let humidity = currentData.humidity
+	let wind_speed = Math.round(currentData.windspeed)
+	let visibility = currentData.visibility
 
 	return (
 		<section className="weather-info">
