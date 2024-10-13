@@ -1,5 +1,6 @@
 import DayHourlyPreviewDesktop from "./DayHourlyPreviewDesktop";
 import NuageuxSVG from "./svg/NuageuxSVG";
+import CloudySVG from "./svg/weather/CloudySVG";
 
 const HourlyPreviewDesktop = ({currentData, forecastData}) => {
 	return (
@@ -64,7 +65,8 @@ const HourlyPreviewDesktop = ({currentData, forecastData}) => {
 					<div className="hours">
 						<div className="h">
 							<h4>00h</h4>
-							<NuageuxSVG alt="nuage" />
+							{/* <NuageuxSVG alt="nuage" /> */}
+							<CloudySVG/>
 							<p>20°</p>
 						</div>
 

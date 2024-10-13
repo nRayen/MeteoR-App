@@ -28,7 +28,6 @@ export async function getCity(lat,lon) {
         }
 
         let data = await res.json();
-        console.log(data)
         return data[data.length-1].local_names.fr
 
     } catch (error) {
@@ -67,6 +66,7 @@ async function getForecast(lat, lon) {
         }
 
         let data = await res.json();
+        console.log(data)
         return data
 
     } catch (error) {

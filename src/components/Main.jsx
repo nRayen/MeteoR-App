@@ -18,7 +18,7 @@ async function Main({city}) {
 
 	return (
 		<main>
-				<CurrentWeather city={city} currentData={currentData} />
+			<CurrentWeather city={city} currentData={currentData} />
 			<div className="informations">
 				<div className="left">
 					<WeatherInfos currentData={currentData} />
