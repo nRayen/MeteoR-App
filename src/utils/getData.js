@@ -16,6 +16,27 @@ async function getCoords(city) {
     }
 }
 
+// Get city from coords
+export async function getCity(lat,lon) {
+    try {
+        let res = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`)
+
+        if (!res.ok) {
+            console.log(lat)
+            console.log(lon)
+            throw new Error("Erreur : " + res.status)
+        }
+
+        let data = await res.json();
+        console.log(data)
+        return data[data.length-1].local_names.fr
+
+    } catch (error) {
+        console.error(error.message)
+    }
+}
+
+
 // Get weather from coords
 async function getWeather(lat, lon) {
 
@@ -53,7 +74,7 @@ async function getForecast(lat, lon) {
     }
 }
 
-// EXPORTED MAIN FUNCTION
+// EXPORTED MAIN FUNCTIONS
 export async function getCurrentData(city) {
     let coords = await getCoords(city)
     let data = await getWeather(coords[0], coords[1])

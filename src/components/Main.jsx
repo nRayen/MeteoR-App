@@ -10,8 +10,6 @@ function delay(ms) {
 }
 async function Main({city}) {
 
-
-
     let currentData = await getCurrentData(city);
 	console.log(currentData);
 
