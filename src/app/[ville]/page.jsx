@@ -17,9 +17,6 @@ export default async function Home({ params }) {
 			</Suspense>
 
 			<Footer />
-			{/* {
-				menuIsOpen ? <Menu onHandleMenu={handleMenu}/> : null
-			} */}
 		</body>
 	);
 }

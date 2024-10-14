@@ -1,5 +1,3 @@
-import { getCity } from "@/utils/getData";
-import LocateSVG from "./svg/LocateSVG";
 import LoupeSVG from "./svg/LoupeSVG";
 import FaviconSVG from "./svg/FaviconSVG";
 

@@ -3,9 +3,6 @@ import NuageuxSVG from './svg/NuageuxSVG'
 
 const DayHourlyPreviewDesktop = ({data}) => {
 
-  
-
-
   return (
     <div className="day">
 					<p>Auj.</p>
