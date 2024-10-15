@@ -1,5 +1,5 @@
 "use client"
-import { getCurrentData } from "@/utils/getData";
+import { getCurrentData, getForecastData } from "@/utils/getData";
 import React from "react";
 import CurrentWeather from "./CurrentWeather";
 import WeatherInfos from "./WeatherInfos";
@@ -18,7 +18,7 @@ async function Main({city}) {
 
 	try {
 		currentData = await getCurrentData(city);
-		forecastData = await getCurrentData(city);
+		forecastData = await getForecastData(city);
 		if (!currentData || currentData.cod !== 200) {
 			router.push("/notfound/")
             return;

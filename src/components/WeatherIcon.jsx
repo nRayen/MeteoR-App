@@ -14,7 +14,6 @@ import FogSVG from './svg/weather/FogSVG'
 
 const WeatherIcon = ({code}) => {
 
-    console.log(code)
 
     switch (code) {
         case "01d" : // Clear

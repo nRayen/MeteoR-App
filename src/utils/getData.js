@@ -22,8 +22,6 @@ export async function getCity(lat,lon) {
         let res = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`)
 
         if (!res.ok) {
-            console.log(lat)
-            console.log(lon)
             throw new Error("Erreur : " + res.status)
         }
 
@@ -66,7 +64,6 @@ async function getForecast(lat, lon) {
         }
 
         let data = await res.json();
-        console.log(data)
         return data
 
     } catch (error) {

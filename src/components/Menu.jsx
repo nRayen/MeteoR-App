@@ -15,8 +15,8 @@ const Menu = ({menuIsOpen, onHandleMenu}) => {
             <div className="wrapper">
 			    <h2>Favoris</h2>
 			    <ul>
-				    {favorites.map((fav) => (
-                        <li className="favorite"><Link href={"/"+fav}>{fav}</Link><FavoriteSVG/></li>
+				    {favorites.map((fav, index) => (
+                        <li className="favorite" key={index}><Link href={"/"+fav}>{fav}</Link><FavoriteSVG/></li>
 				    ))}
 			    </ul>
             </div>
