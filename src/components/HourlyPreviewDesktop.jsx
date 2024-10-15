@@ -9,7 +9,7 @@ const HourlyPreviewDesktop = ({currentData, forecastData}) => {
 				<DayHourlyPreviewDesktop index={2} forecastData = {forecastData}/>
 				<DayHourlyPreviewDesktop index={3} forecastData = {forecastData}/>
 			</div>
-	);
+	); 
 };
 
 export default HourlyPreviewDesktop;

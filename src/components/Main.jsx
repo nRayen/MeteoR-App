@@ -36,7 +36,7 @@ async function Main({city}) {
 			<div className="informations">
 				<div className="left">
 					<WeatherInfos currentData={currentData} />
-					<DailyPreview />
+					<DailyPreview forecastData={forecastData} />
 				</div>
 				<HourlyPreview currentData={currentData} forecastData={forecastData} />
 			</div>

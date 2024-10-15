@@ -20,7 +20,7 @@ const CurrentWeather = ({ city, currentData }) => {
 				<WeatherIcon code = {iconCode}/>
 				<p className="sky-label">{description}</p>
 			</div>
-			<DateSelector />
+			{/* <DateSelector /> */}
 		</section>
 	);
 };

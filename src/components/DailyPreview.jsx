@@ -1,36 +1,19 @@
+import DayPreview from "./DayPreview";
 import NuageuxSVG from "./svg/NuageuxSVG";
 
-const DailyPreview = () => {
+const DailyPreview = ({forecastData}) => {
+
+
+
 	return (
 		<section className="daily glass">
 			<h3 className="glass-text">Jours à venir</h3>
 			<div className="preview-d">
-				<div className="day">
-					<h4>Mardi</h4>
-					<NuageuxSVG alt="nuage" />
-					<div className="temp">
-						<span className="min">8°</span>
-						<span className="max">23°</span>
-					</div>
-				</div>
 
-				<div className="day">
-					<h4>Mercredi</h4>
-					<NuageuxSVG alt="nuage" />
-					<div className="temp">
-						<span className="min">8°</span>
-						<span className="max">23°</span>
-					</div>
-				</div>
+				<DayPreview forecastData={forecastData} index={0} />
+				<DayPreview forecastData={forecastData} index={1} />
+				<DayPreview forecastData={forecastData} index={2} />
 
-				<div className="day">
-					<h4>Jeudi</h4>
-					<NuageuxSVG alt="nuage" />
-					<div className="temp">
-						<span className="min">8°</span>
-						<span className="max">23°</span>
-					</div>
-				</div>
 			</div>
 		</section>
 	);
